@@ -15,7 +15,7 @@
   </head>
   <body>
 	<div class="container">
-		<div id="header" class="sticky-top">
+		
 		<hr>
 	    <div class="row">
 	    	<div class="col-md-2">
@@ -40,6 +40,7 @@
 	    	</div>
 	    </div>
 	    <hr>
+	    <div id="header" class="sticky-top">
 	    <div class="row">
 	    	<div class="col-md-12">
 	    		<ul class="nav nav-pills">
@@ -123,12 +124,14 @@
                 
                 // When the user clicks on the button, scroll to the top of the document
                 function topFunction() {
-                  document.body.scrollTop = 0;
-                  document.documentElement.scrollTop = 0;
+                  // document.body.scrollTop = 0;
+                  // document.documentElement.scrollTop = 0;
+                  $('html,body').animate({ scrollTop: 0 }, 'slow');
                 }
             </script>
 			<section class="jumbotron" id="topics">
 				<h4>Topics that will be covered durin the workshop:</h4>
+				<br>
 				<ul>
 					<li>Fundamental concepts of HPC</li>
 					<li>Architecture Evolution for HPC</li>
@@ -142,18 +145,21 @@
 				</ul>
 			</section>
 
-			<section class="jumbotron" id="eligibility">
+			<section style="height: 10%" class="jumbotron" id="eligibility">
 				<h4>Eligibility and Selection</h4>
+				<br>
 				<p>The workshop is open to interested UG/PG Students, Research Scholars, Faculty Members of all Engineering colleges in India.</p>
-				<p>NOTE:</p>
+				<p><b>NOTE:</b></p>
 				<ul>
 					<li>Totalparticipants will be limited to 50.</li>
+					<br>
 					<li>Limited accommodation available, on prior request. The expenses have to borne byparticipants.</li>
 				</ul>
 			</section>
 
 			<section class="jumbotron" id="registration">
 				<h4>Registration</h4>
+				<br>
 				<p>Interested participants are requested to send the signed registration form in the format given (scanned) in the <a href="./files/brochure.pdf" target="_blank">brochure</a>, duly forwarded by the competent authority with Registration Fee paid details on or before 31st July 2019 by Email.</p>
 
 				<p>Details are as follows:</p>
@@ -167,8 +173,9 @@
 				Remarks : HPCA 2019, IT Dept
 			</section>
 
-			<section class="jumbotron" id="dates">
+			<section style="height: 10%" class="jumbotron" id="dates">
 				<h4>Important Dates</h4>
+				<br>
 				Last date for receipt of applications: July 31, 2019<br>
 				Intimation of selection by email: August 1, 2019<br>
 				Workshop Dates: August 12 - 17, 2019
@@ -188,24 +195,28 @@
 				<p>Established in year 2000, the Department of Information Technology has grown into a center for excellence, innovation and high-quality research, with dedicated faculty & staff, highly motivated students, state-of-the-art facilities and an innovative teaching-learning environment. The department was accredited by National Board of Accreditation (NBA) for 5 years w.e.f. July 1st, 2014 and extended for 3 years in June 2019. IT students have consistently achieved 100% placements year after year and have demonstrated a high level of success at pursuing post-graduate and doctoral studies at leading universities world-wide.</p>
 			</section>
 
-			<section class="jumbotron" id="schedule">
+			<section style="height: 10%" class="jumbotron" id="schedule">
 				<h4>Workshop Schedule</h4>
+				<br>
 				<p>To be updated soon.</p>
 			</section>
 
-			<section class="jumbotron" id="speakers">
+			<section style="height: 10%" class="jumbotron" id="speakers">
 				<h4>Speakers</h4>
+				<br>
 				<p>To be updated soon.</p>
 			</section>
 
-			<section class="jumbotron" id="team">
+			<section style="height: 10%" class="jumbotron" id="team">
 				<h4>Workshop Coordinators</h4>
+				<br>
 				<p><a href="http://infotech.nitk.ac.in/faculty/sowmya-kamath-s" target="_blank">Dr. Sowmya Kamath S.</a>, Dept. of Information Technology, NIT Karnataka</p>
 				<p><a href="http://infotech.nitk.ac.in/faculty/geetha-v" target="_blank">Dr. Geetha V.</a>, Dept. of Information Technology, NIT Karnataka</p>
 			</section>
 
 			<section class="jumbotron" id="contact">
 				<h4>Address for Communication</h4>
+				<br>
 				<address>
 					Program Coordinators<br>
 					National Workshop on HPCA 2019,<br>
@@ -242,10 +253,10 @@
 	 
 				var target = this.hash;
 				$('html, body').stop().animate({
-					'scrollTop': $(target).offset().top - 300
+					'scrollTop': $(target).offset().top - $('#header').height()
 				}, 500, 'swing', function () {
 					// window.location.hash = target;
-					window.scrollTo($(target).offset().top + 300);
+					window.scrollTo(0, $(target).offset().top - $('#header').height());
 					$(document).on("scroll", onScroll);
 				});
 			});
