@@ -44,10 +44,16 @@ body {
     height: 200px;
     width:500px;
   }
-  
+  .customgallery{
+    height: 350px;
+    width:500px;
+  }
   @media screen and (max-width: 600px) {
 .customimg{width: 250px;
 height: 100px;}
+.customgallery{
+    width: 250px;
+    height: 100px;}
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
   float: right;
