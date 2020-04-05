@@ -52,7 +52,7 @@
 						<a href="#people">People</a>
 						<a href="#publications">Publications</a>
 						<a href="#posts">Posts</a>
-						<a href="#events">Events</a>
+						<!-- <a href="#events">Events</a> -->
 						<!-- <a href="#eligibility">Eligibility</a>
 						<a  href="#registration">Registration</a>
 						<a href="#dates">Dates</a>
@@ -420,7 +420,7 @@
 	 
 		function onScroll(event){
 			var scrollPosition = $(document).scrollTop();
-			$('div ul li a').each(function () {
+			$('div a').each(function () {
 				var currentLink = $(this);
 				var refElement = $(currentLink.attr("href"));
 				if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
